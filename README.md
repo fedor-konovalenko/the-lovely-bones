@@ -29,23 +29,23 @@ ___________________
 
 Masks were manually marked (CVAT) for individual bones in images from the Mura and FracAtlas datasets. A total of about 160 pictures.
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/0.png" width="700" height="200">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/0.png" width="700" height="200">
 
 *segmantation mask examples*
 
 For semantic segmentation the SegNet pretained at [ADDI](https://www.fc.up.pt/addi/ph2%20database.html) dataset was used. The pretrained SegNet showed slightly better results than the non-pretrained one, as well as higher operating speed (with comparable quality) than UNet.
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/5.png" width="700" height="200">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/5.png" width="700" height="200">
 
 *ADDI data example*
 
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/1.png" width="700" height="200">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/1.png" width="700" height="200">
 
 *SegNet Training*
 
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/3.png" width="500" height="500">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/3.png" width="500" height="500">
 
 *SegNet Semantic Segmentation*
 
@@ -82,7 +82,7 @@ For subsequent detection of damage sites, the SSD300-VGG16 model was used, addit
 
 
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/4.png" width="900" height="600">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/4.png" width="900" height="600">
 
 *The SSD300 prediction example. Blue -Preicted, Red - Ground Truth*
 
@@ -90,11 +90,11 @@ For subsequent detection of damage sites, the SSD300-VGG16 model was used, addit
 
 The results for metrics and the presence of false positive alarms are comparable to the SSD300-VGG16. However, as the dataset size increases, it makes sense to compare the quality of these models again.
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/9.png" width="900" height="600">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/9.png" width="900" height="600">
 
 *YOLOv8 training results*
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/10.png" width="900" height="600">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/10.png" width="900" height="600">
 
 *Yolo detection example*
 
@@ -108,17 +108,17 @@ Based on FastAPI
 
 
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/7.png" width="450" height="300">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/7.png" width="450" height="300">
 
 *Segmentation (The image is not X-Ray image)*
 
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/6.png" width="300" height="300">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/6.png" width="300" height="300">
 
 *Segmentation (The image is X-Ray image)*
 
 
-<img src="https://github.com/salfa-ru/doct24_neural-network/blob/Fedor_Konovalenko/bones_segmentation/pictures/8.png" width="300" height="300">
+<img src="https://github.com/fedor-konovalenko/the-lovely-bones/blob/main/pictures/8.png" width="300" height="300">
 
 *Detection*
 
@@ -142,9 +142,9 @@ ______
 
 |Data|Link|Comments|
 |--|--|--|
-|MURA|[MURA](https://stanfordmlgroup.github.io/competitions/mura/)|только руки, разметка "есть дефект/нет дефекта"|
-|roboflow|[Roboflow](https://universe.roboflow.com/nishanth/x-ray-bones-detector/dataset/4)|разметка по отдельным костям. только кисти рук|
-|FracAtlas|[FracAtlas](https://github.com/XLR8-07/FracAtlas)|разметка с сегментацией и bbox только для повреждений костей. Кости всего тела. Есть бэйзлайн по обучению YOLO8 на поиск дефектов|
+|MURA|[MURA](https://stanfordmlgroup.github.io/competitions/mura/)|Only hands and arms. There are labels for classification task (fractured / non fractured)|
+|roboflow|[Roboflow](https://universe.roboflow.com/nishanth/x-ray-bones-detector/dataset/4)|Only hands. Masks for bones.|
+|FracAtlas|[FracAtlas](https://github.com/XLR8-07/FracAtlas)|Bones of the whole body. There are BBox-es for fracture detection and YOLO baseline.|
 
 ## References
 

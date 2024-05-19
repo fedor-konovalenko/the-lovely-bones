@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preprocessing Results</title>
+</head>
+<body>
+<h2>Segmentation result - {{segm}}</h2>
+                <p>
+                <img src={{path}}>
+                <h2 style="background-color:lime;">{{message}}</h2>
+                <p>
+                <form action={{act}} enctype="multipart/form-data" method="post">
+                <input name="file" type="file">
+                <input type="submit">
+                <button onclick="history.back()">Go Back</button>
+                </form>
+</body>
+</html>
